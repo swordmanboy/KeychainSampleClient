@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E2193" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeychainSampleClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jJa-kN-SiI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XWs-Zx-RYY" customClass="SMBUITextView" customModule="KeychainSampleClient" customModuleProvider="target">
+                                <rect key="frame" x="16" y="45" width="343" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornorRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorBorder">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jt8-du-dpr" customClass="SMBUIButton" customModule="KeychainSampleClient" customModuleProvider="target">
+                                <rect key="frame" x="93.5" y="373" width="187.5" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jt8-du-dpr" secondAttribute="height" multiplier="187:40" id="liH-6H-T00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornorRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Us-q0-LWi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SH-8K-JPY" customClass="SMBUIButton" customModule="KeychainSampleClient" customModuleProvider="target">
+                                <rect key="frame" x="93.5" y="438" width="187.5" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9SH-8K-JPY" secondAttribute="height" multiplier="187:40" id="tSL-gB-GpI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="SET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornorRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PZw-wS-zDD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmc-en-arg">
+                                <rect key="frame" x="165" y="528" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.92156862750000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jt8-du-dpr" firstAttribute="width" secondItem="jJa-kN-SiI" secondAttribute="width" multiplier="0.5" id="17Z-f6-jHM"/>
+                            <constraint firstItem="Jt8-du-dpr" firstAttribute="centerX" secondItem="jJa-kN-SiI" secondAttribute="centerX" id="92u-yu-att"/>
+                            <constraint firstItem="XWs-Zx-RYY" firstAttribute="height" secondItem="jJa-kN-SiI" secondAttribute="height" multiplier="0.45" id="HGN-kM-gST"/>
+                            <constraint firstItem="9SH-8K-JPY" firstAttribute="top" secondItem="Jt8-du-dpr" secondAttribute="bottom" constant="25" id="Hdo-Wl-G5e"/>
+                            <constraint firstItem="XWs-Zx-RYY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="Jzx-wI-8mK"/>
+                            <constraint firstItem="Jt8-du-dpr" firstAttribute="top" secondItem="XWs-Zx-RYY" secondAttribute="bottom" constant="28" id="Vb1-mt-WuD"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="XWs-Zx-RYY" secondAttribute="leading" id="bVw-Hl-LZd"/>
+                            <constraint firstItem="9SH-8K-JPY" firstAttribute="centerX" secondItem="jJa-kN-SiI" secondAttribute="centerX" id="d73-pV-cq9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XWs-Zx-RYY" secondAttribute="trailing" id="kBW-FV-uO5"/>
+                            <constraint firstItem="9SH-8K-JPY" firstAttribute="width" secondItem="jJa-kN-SiI" secondAttribute="width" multiplier="0.5" id="lam-Cy-nGG"/>
+                            <constraint firstItem="cmc-en-arg" firstAttribute="centerX" secondItem="jJa-kN-SiI" secondAttribute="centerX" id="pmz-6C-yNb"/>
+                            <constraint firstItem="cmc-en-arg" firstAttribute="top" secondItem="9SH-8K-JPY" secondAttribute="bottom" constant="50" id="wOi-fQ-ysM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DatatxtView" destination="XWs-Zx-RYY" id="zKQ-yk-pkA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
